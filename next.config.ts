@@ -1,14 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
-    remotePatterns: [new URL('https://storage.googleapis.com/getshoot/uploads/**')],
+    domains: ['storage.googleapis.com']
   },
-  env:{
+  env: {
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL
   },
-  output: 'standalone',
+  output: 'standalone'
 };
 
 export default nextConfig;
