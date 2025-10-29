@@ -1,0 +1,18 @@
+# cloudbuild.yaml (Same file used for both manual and automated builds)
+steps:
+  # 1. Build the Docker image
+  - name: "gcr.io/cloud-builders/docker"
+    args: [
+        "build",
+        "-t",
+        "${_GCR_TAG}",
+        ".",
+        "--build-arg",
+        "NEXT_PUBLIC_API_URL=${_NEXT_PUBLIC_API_URL}", # Uses the variable set in the Trigger
+      ]
+  # 2. Push the Docker image
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "${_GCR_TAG}"]
+
+images:
+  - "${_GCR_TAG}"
