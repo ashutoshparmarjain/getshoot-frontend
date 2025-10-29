@@ -41,6 +41,7 @@ RUN npm ci --omit=dev
 # Copy necessary build outputs and public assets
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
+COPY --from=builder /app/next.config.js ./
 
 # Expose port and set default envs
 ENV PORT=3000
