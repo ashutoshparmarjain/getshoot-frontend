@@ -1,4 +1,4 @@
-## DEMO
+## Assignment DEMO
 
 URL: https://getshoot-frontend-178777845649.europe-west1.run.app
 
