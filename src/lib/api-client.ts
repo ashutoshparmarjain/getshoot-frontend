@@ -3,7 +3,7 @@ import { auth } from "./auth";
 
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL ||
-  "https://getshoot-backend-178777845649.us-central1.run.app/api";
+  "https://getshoot-backend-178777845649.europe-west1.run.app/api";
 
 interface ApiResponse<T> {
   data?: T;
